@@ -6,9 +6,10 @@ import java.util.*;
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     private Map timeEntries = new HashMap<>();
+    private long idCounter=0;
 
 public TimeEntry create(TimeEntry timeEntry) {
-    long id = timeEntries.size()+1;
+    long id = ++idCounter;
     timeEntry.setId(id);
     timeEntries.put(id,timeEntry);
 
