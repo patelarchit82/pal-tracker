@@ -1,7 +1,6 @@
 package io.pivotal.pal.tracker;
 
-import org.springframework.http.ResponseEntity;
-
+import java.util.Collection;
 import java.util.List;
 
 public interface TimeEntryRepository {
@@ -10,7 +9,7 @@ public TimeEntry create(TimeEntry timeEntry);
 
     TimeEntry find(long l);
 
-    ResponseEntity<List<TimeEntry>> list();
+    Collection list();
 
     TimeEntry update(long eq, TimeEntry any);
 
