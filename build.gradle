@@ -1,19 +1,17 @@
 plugins {
     id "java"
-    id "org.springframework.boot"  version '1.5.4.RELEASE'
+    id "org.springframework.boot" version "1.5.4.RELEASE"
 }
 
 repositories {
     mavenCentral()
 }
 
-sourceCompatibility = '1.8.0_162'
-targetCompatibility = '1.8.0_162'
-
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
+
 
 bootRun.environment([
         "WELCOME_MESSAGE": "hello",
@@ -22,4 +20,3 @@ bootRun.environment([
 test.environment([
         "WELCOME_MESSAGE": "Hello from test",
 ])
-
