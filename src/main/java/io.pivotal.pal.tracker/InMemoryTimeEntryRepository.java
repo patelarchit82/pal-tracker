@@ -45,13 +45,8 @@ public TimeEntry create(TimeEntry timeEntry) {
     }
 
     @Override
-    public List<TimeEntry> delete(long l) {
+    public void delete(long l) {
         if (timeEntries.containsKey(l))
             timeEntries.remove(l);
-
-        List entries = new ArrayList(timeEntries.values());
-
-        return entries;
-
     }
 }

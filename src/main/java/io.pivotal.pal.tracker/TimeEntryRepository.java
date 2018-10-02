@@ -13,5 +13,5 @@ public TimeEntry create(TimeEntry timeEntry);
 
     TimeEntry update(long eq, TimeEntry any);
 
-    List<TimeEntry> delete(long l);
+    void delete(long l);
 }
